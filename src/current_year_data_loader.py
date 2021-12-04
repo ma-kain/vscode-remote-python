@@ -4,10 +4,6 @@ import nse_india
 import datetime
 import one_time_data_loader
 
-
-current_year = 2021
-
-
 def import_into_db(data, sql, con, index):
     rows = []
     for row in data[1:]:
@@ -30,8 +26,8 @@ if __name__ == "__main__":
 
     print(f'Start: {start}, End: {end}.')
 
-    if start > end:
-        print('Exit program as start is greater than end.')
+    if start >= end:
+        print('Exit program as start is not greater than end.')
         print(exit)
         exit()
     
